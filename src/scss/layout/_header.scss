@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+
+// Titulo
+
+.title {
+
+    h1 {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+    padding: 1.5rem;
+    background: linear-gradient(0deg,v.$gris-antracita, v.$negro-carbon);
+    color: v.$blanco;
+    
+    
+
+}
+
+// Navegacion
+.nav {
+    margin-top: 0rem;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(180deg,v.$gris-antracita ,v.$negro-carbon );
+    color: v.$blanco;
+
+    & > a {
+        display: inline;
+        line-height: 5rem;
+        margin-left: 1rem;
+    }
+
+    & a:last-child {
+        margin-right: 3rem;
+    }
+}
+
+.nav {
+
+    & a:hover  {
+        font-size: 1.8rem;
+        transition: .5s ease;
+    }
+    
+    & a:not(:hover) {
+        font-size: 1.5rem;
+        transition: .5s ease;
+    }
+}

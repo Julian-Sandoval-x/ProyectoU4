@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+
+/* Horario */
+
+.horario {
+    margin: 10rem 0;
+}
+
+
+tr:nth-child(even) {
+    background-color: v.$gris-perla;
+}
+
+tr:last-child {
+    background-color: v.$madera-clara;
+}

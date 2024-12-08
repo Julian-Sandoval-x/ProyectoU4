@@ -1,0 +1,24 @@
+/* Services */
+
+.service {
+    display: flex;
+    
+    & p {
+        margin-left: 5rem;
+    }
+
+    & > img {
+        max-width: 22rem;
+        height: 15rem;
+        border-radius: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+.services {
+    margin-bottom: 6rem;
+
+    & h3 {
+        margin-bottom: 0;
+    }
+}

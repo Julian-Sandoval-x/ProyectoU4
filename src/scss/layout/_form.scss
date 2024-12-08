@@ -1,0 +1,229 @@
+@use 'base/variables' as v;
+// Estilos para el formulario de modificación
+.form-modificar {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: v.$blanco;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+    h2 {
+      font-family: v.$fuenteTitulo;
+      color: v.$negro;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+  
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+  
+      label {
+        font-family: v.$fuenteTexto;
+        color: v.$gris-antracita;
+        font-size: 1rem;
+      }
+  
+      input, select {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid v.$gris-cemento;
+        border-radius: 5px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          border-color: v.$azul;
+          outline: none;
+        }
+      }
+    }
+  
+    .form-actions {
+      text-align: center;
+    }
+  
+    .btn-submit {
+        background-color: v.$azul;
+        color: v.$blanco;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      
+        &:hover {
+          background-color: darken(v.$azul, 15%); /* Oscurece el azul en hover */
+          transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+      
+        &:focus {
+          outline: none;
+        }
+      }
+      
+      
+  }
+  
+
+  .btn-regresar {
+    background-color: v.$gris-perla;
+    color: v.$negro;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+    &:hover {
+      background-color: darken(v.$gris-perla, 10%);
+      color: v.$blanco;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  /* Estilo general del modal */
+.modal {
+    display: none; /* Inicialmente está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-contenido {
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .btn-confirmar, .btn-cancelar {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-confirmar {
+    background-color: v.$rojo;
+    color: v.$blanco;
+  
+    &:hover {
+      background-color: darken(v.$rojo, 10%);
+      transform: scale(1.05);
+    }
+  }
+  
+  .btn-cancelar {
+    background-color: v.$gris-perla;
+    color: v.$negro;
+  
+    &:hover {
+      background-color: darken(v.$gris-perla, 10%);
+      transform: scale(1.05);
+    }
+  }
+  
+/* Seccion admin */
+  .form-agregar {
+    label {
+      font-family: v.$fuenteTexto;
+      color: v.$gris-antracita;
+      font-size: 1.8rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      border: 0.1rem solid v.$gris-cemento;
+      border-radius: 1rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+  
+      &:focus {
+        border-color: v.$azul;
+        outline: none;
+      }
+    }
+
+    .btn-agregar {
+      background-color: v.$ocre;
+      color: v.$blanco;
+      font-size: 1.3rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+  
+      &:hover {
+        background-color: darken(v.$ocre, 10%);
+      }
+  
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 80%;
+      margin-bottom: 1.5rem;
+      margin-left: 10rem;
+
+      select {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid v.$gris-cemento;
+        border-radius: 5px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+  
+        &:focus {
+          border-color: v.$azul;
+          outline: none;
+        }
+      }
+
+    }
+    
+  }

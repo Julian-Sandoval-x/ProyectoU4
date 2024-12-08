@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+
+/* Estilo general del modal */
+.modal {
+    display: none; /* Inicialmente está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-contenido {
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .btn-confirmar, .btn-cancelar {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-confirmar {
+    background-color: v.$rojo;
+    color: v.$blanco;
+  
+    &:hover {
+      background-color: darken(v.$rojo, 10%);
+      transform: scale(1.05);
+    }
+  }
+  
+  .btn-cancelar {
+    background-color: v.$gris-perla;
+    color: v.$negro;
+  
+    &:hover {
+      background-color: darken(v.$gris-perla, 10%);
+      transform: scale(1.05);
+    }
+  }
+  

@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+
+.pedidos-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: v.$blanco;
+  box-shadow: 0 4px 8px rgba(v.$negro-carbon, 0.1);
+  border-radius: 8px;
+  font-family: v.$fuenteTexto;
+}
+
+h1 {
+  font-family: v.$fuenteTitulo;
+  color: v.$negro-carbon;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pedido {
+  border: 1px solid v.$gris-cemento;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: v.$blanco-roto;
+}
+
+.pedido h3 {
+  font-family: v.$fuenteSubtitulo;
+  color: v.$azul;
+  margin-bottom: 0.5rem;
+}
+
+.pedido p {
+  margin: 0.5rem 0;
+  color: v.$negro-carbon;
+}

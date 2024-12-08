@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+
+#about {
+    background-color: v.$gris-perla;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 90%;
+    border-radius: 1rem;
+
+    p {
+        margin-left: 1.2rem;
+        line-height: 2.9rem;
+    }
+
+    q {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+
+}

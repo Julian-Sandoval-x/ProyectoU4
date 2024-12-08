@@ -1,0 +1,29 @@
+
+.galeria {
+    display: flex;
+    width: 80rem;
+    height: 43rem;
+    margin: 0 auto;
+
+    img {
+    width: 0rem;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5 ease;
+    
+        
+        &:hover {
+            width: 30rem;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+    }
+
+}
+
+// .galeria img:hover{
+//     width: 30rem;
+//     opacity: 1;
+//     filter: contrast(120%);
+// }

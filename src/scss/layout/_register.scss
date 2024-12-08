@@ -1,0 +1,119 @@
+@use 'base/variables' as v;
+
+// Estilos para el contenedor del register
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: v.$gris-perla;
+    font-family: v.$fuenteTexto;
+}
+
+// Estilos para la carta del register
+.register-card {
+    background-color: v.$blanco;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(v.$negro-carbon, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+// Estilos para la columna izquierda del register
+.register-left {
+    flex: 1;
+    padding: 2rem;
+    border-right: 1px solid v.$gris-cemento;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Estilos para la columna derecha del register
+.register-right {
+    display: block;
+    padding: 2rem;
+}
+
+// Estilos para el título del register
+.register-title {
+    font-family: v.$fuenteTitulo;
+    color: v.$negro-carbon;
+    margin-bottom: 2rem;
+}
+
+// Estilos para el formulario del register
+.register-form {
+    width: 100%;
+}
+
+// Estilos para los grupos de formulario
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-family: v.$fuenteSubtitulo;
+        color: v.$negro-carbon;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid v.$gris-cemento;
+        border-radius: 4px;
+        font-family: v.$fuenteTexto;
+        font-size: 1rem;
+    }
+}
+
+// Estilos para el botón de register
+.register-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: v.$azul;
+    color: v.$blanco;
+    border: none;
+    border-radius: 4px;
+    font-family: v.$fuenteSubtitulo;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken(v.$azul, 10%);
+        color: v.$blanco;
+    }
+}
+
+// Estilos para el mensaje de bienvenida
+.welcome-message {
+    font-family: v.$fuenteTitulo;
+    color: v.$negro-carbon;
+    font-size: 3.6rem;
+}
+
+// Estilos para los mensajes de alerta
+.alert {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-family: v.$fuenteTexto;
+    font-size: 1rem;
+}
+
+.alert-danger {
+    background-color: v.$rojo;
+    color: v.$blanco;
+}
+
+.alert-success {
+    background-color: v.$azul;
+    color: v.$blanco;
+}

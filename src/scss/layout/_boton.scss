@@ -1,0 +1,115 @@
+@use 'base/variables' as v;
+
+.button {
+    display: block;
+    background-color: v.$madera-clara;
+    color: v.$blanco;
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    &:hover {
+        transition: linear .5s ease;
+        background-color: v.$verde-oliva;
+    }
+}
+
+
+/* Botones en Admin */
+// Botones Generales
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.update {
+    background-color: v.$azul; // Color de fondo azul
+    color: v.$blanco; // Color del texto blanco
+    font-family: v.$fuenteSubtitulo; // Fuente estilizada para los botones
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem; // Espaciado interno
+    border: none; // Sin borde
+    border-radius: 25px; // Bordes redondeados para un look más suave
+    cursor: pointer; // Aparece el puntero de mano al pasar el ratón
+    text-transform: uppercase; // Transforma el texto a mayúsculas para un toque elegante
+    transition: all 0.3s ease; // Suaviza la transición de los efectos (hover/focus)
+  
+    &:hover {
+      background-color: v.$verde-oliva; // Cambio de color a azul claro cuando el ratón pasa sobre el botón
+    }
+  
+    &:focus {
+      outline: none; // Elimina el contorno por defecto cuando el botón tiene foco
+      box-shadow: 0 0 10px v.$verde-oliva; // Agrega un resplandor suave alrededor del botón cuando se hace foco
+    }
+  }
+  
+  // Botón de "Agregar Reservación" (en la sección de agregar)
+  .btn-agregar {
+    background-color: v.$ocre; // Color de fondo para el botón de agregar
+    color: v.$blanco; // Texto blanco
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border: none;
+    max-width: 15rem;
+    border-radius: 30px; // Bordes más redondeados para hacerlo destacar
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; // Centra el botón horizontalmente
+    text-align: center;
+
+    
+  
+    &:hover {
+      background-color: darken(v.$ocre, 10%); // Oscurece el color al pasar el ratón
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px darken(v.$ocre, 10%); // Resplandor oscuro al hacer foco
+    }
+  }
+
+  // Botón de "Eliminar" (en la sección de eliminar)
+  .delete {
+    color: v.$blanco; // Color del texto blanco
+    font-family: v.$fuenteSubtitulo; // Fuente estilizada para los botones
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem; // Espaciado interno
+    border: none; // Sin borde
+    border-radius: 25px; // Bordes redondeados para un look más suave
+    cursor: pointer; // Aparece el puntero de mano al pasar el ratón
+    text-transform: uppercase; // Transforma el texto a mayúsculas para un toque elegante
+    transition: all 0.3s ease; // Suaviza la transición de los efectos (hover/focus)
+    background-color: v.$rojo;
+
+    &:hover {
+        background-color: darken(v.$rojo, 10%); // Oscurece el color al pasar el ratón
+      }
+    
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 10px darken(v.$rojo, 10%); // Resplandor oscuro al hacer foco
+      }
+}
+
+.back-button {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

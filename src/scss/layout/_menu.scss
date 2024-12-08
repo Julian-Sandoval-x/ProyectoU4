@@ -1,0 +1,91 @@
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.nav .enlaces{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$blanco;
+    padding: 1rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container {
+    margin: 0 auto;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid v.$negro;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$blanco;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    & > p {
+        margin-top: .8rem;
+    }
+
+    &:hover {
+        transition: ease .5s;
+        scale: 1.1;
+    }
+
+    &:not(:hover) {
+        transition: ease .5s;
+        scale: 1;
+    }
+    .add-button {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: v.$azul;
+        color: v.$blanco;
+        border: none;
+        border-radius: 1rem;
+        font-family: v.$fuenteSubtitulo;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken(v.$azul, 10%);
+        }
+    }
+}
+
+/* Entradas */
+.menu-entradas {
+    @include m.grid(3);
+}
+
+
+/* Comida Fuerte y postres */
+.menu-fuerte, .menu-postres {
+    @include m.grid(2);
+}
+
+/* Medida imagenes */
+.menu-entradas img, .menu-fuerte img, .menu-postres img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.menu-entradas, .menu-fuerte, .menu-postres {
+    margin: 0 auto;
+    width: 80rem;
+
+}

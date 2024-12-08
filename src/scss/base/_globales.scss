@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+/* Globales */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+h1 {
+    font-family: v.$fuenteTitulo;
+    font-size: 2.8rem;
+    margin-left: 3rem;
+}
+
+h2, h3 {
+    font-family: v.$fuenteSubtitulo;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+body {
+    font-family: v.$fuenteTexto;
+    font-size: 1.6rem;
+    background-color: v.$blanco-roto;
+}
+
+table {
+    margin: 0 auto;
+    width: 60rem;
+    height: 10rem;
+}
+
+th, td {
+    text-align: center;
+}
+
+ul > li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: v.$blanco;
+}
+
+span {
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
