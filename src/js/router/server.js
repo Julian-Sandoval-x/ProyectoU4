@@ -116,16 +116,17 @@ app.patch("/api/pedidos/:id/cancelar", isAuthenticated, (req, res) => {
 
 // Ruta para manejar la creación de usuarios
 app.post("/create_user", async (req, res) => {
-  const { email, password } = req.body;
+  const { username, email, password } = req.body;
 
-  if (!email || !password) {
+  if (!email || !password || username) {
     return res
       .status(400)
       .json({ message: "Todos los campos son obligatorios" });
   }
 
-  const query = "INSERT INTO usuarios (correo, password) VALUES (?, ?)";
-  db.query(query, [email, password], (err, results) => {
+  const query =
+    "INSERT INTO usuarios (usuario, correo, password) VALUES (?, ?, ?)";
+  db.query(query, [username, email, password], (err, results) => {
     if (err) {
       console.error("Error inserting user into database:", err);
       return res.status(500).json({ message: "Error al registrar el usuario" });
