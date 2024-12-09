@@ -10,7 +10,7 @@ const db = createPool({
   user: process.env.DB_USER || "root",
   password: process.env.DB_PASS || "fkPYZOChHznaSqGQwokzTKorSBJfPMIi",
   database: process.env.DB_NAME || "railway",
-  port: process.env.DB_PORT || 3306, // Asegúrate de especificar el puerto
+  port: process.env.DB_PORT || 12357, // Asegúrate de especificar el puerto
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
