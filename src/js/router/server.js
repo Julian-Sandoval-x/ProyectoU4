@@ -77,34 +77,6 @@ app.get("/api/pedidos", isAuthenticated, (req, res) => {
   });
 });
 
-// Ruta para obtener los pedidos del usuario
-app.get("/api/pedidos", (req, res) => {
-  const userId = req.userId;
-
-  const query = "SELECT * FROM pedidos WHERE idUser = ?";
-  db.query(query, [userId], (err, results) => {
-    if (err) {
-      console.error("Error fetching orders from database:", err);
-      return res.status(500).json({ message: "Error al obtener los pedidos" });
-    }
-    res.status(200).json(results);
-  });
-});
-
-// Ruta para obtener los pedidos del usuario
-app.get("/api/pedidos", (req, res) => {
-  const userId = req.userId;
-
-  const query = "SELECT * FROM pedidos WHERE idUser = ?";
-  db.query(query, [userId], (err, results) => {
-    if (err) {
-      console.error("Error fetching orders from database:", err);
-      return res.status(500).json({ message: "Error al obtener los pedidos" });
-    }
-    res.status(200).json(results);
-  });
-});
-
 // Ruta para cancelar pedidos
 app.patch("/api/pedidos/:id/cancelar", isAuthenticated, (req, res) => {
   const userId = req.userId; // Extraído del token JWT
@@ -152,8 +124,6 @@ app.post("/create_user", async (req, res) => {
       .json({ message: "Todos los campos son obligatorios" });
   }
 
-  //   const hashedPassword = await bcrypt.hash(password, 10);
-
   const query = "INSERT INTO usuarios (correo, password) VALUES (?, ?)";
   db.query(query, [email, password], (err, results) => {
     if (err) {
@@ -180,22 +150,8 @@ app.post("/login", (req, res) => {
       console.error("Error fetching user from database:", err);
       return res.status(500).json({ message: "Error al iniciar sesión" });
     }
-    // console.log(results[0].id);
-    // if (results) {
-    //   return res
-    //     .status(401)
-    //     .json({ message: "Correo o contraseña incorrectos" });
-    // }
 
     const user = results[0];
-    // const isPasswordValid = await bcrypt.compare(password, user.password);
-
-    // if (!isPasswordValid) {
-    //   return res
-    //     .status(401)
-    //     .json({ message: "Correo o contraseña incorrectos" });
-    // }
-
     const token = jwt.sign({ id: user.id }, secretKey, { expiresIn: "1h" });
     res.status(200).json({ token });
   });
