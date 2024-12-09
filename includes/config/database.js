@@ -6,11 +6,11 @@ dotenv.config();
 
 // Crear el pool de conexiones
 const db = createPool({
-  host: "autorack.proxy.rlwy.net", // Usa variables de entorno para flexibilidad
-  user: "root",
-  password: "fkPYZOChHznaSqGQwokzTKorSBJfPMIi",
-  database: "railway",
-  port: 3306,
+  host: process.env.DB_HOST || "autorack.proxy.rlwy.net",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASS || "fkPYZOChHznaSqGQwokzTKorSBJfPMIi",
+  database: process.env.DB_NAME || "railway",
+  port: 3306, // Asegúrate de especificar el puerto
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
