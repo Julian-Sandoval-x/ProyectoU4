@@ -10,6 +10,7 @@ const db = createPool({
   user: "root",
   password: "fkPYZOChHznaSqGQwokzTKorSBJfPMIi",
   database: "railway",
+  port: 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
