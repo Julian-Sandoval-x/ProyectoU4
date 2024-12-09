@@ -14,7 +14,7 @@ const db = createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  connectTimeout: 50000, // 10 segundos
+  connectTimeout: 100000, // 10 segundos
 });
 
 // Verificar la conexión al inicializar
