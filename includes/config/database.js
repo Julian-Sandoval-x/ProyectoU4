@@ -1,14 +1,18 @@
 import dotenv from "dotenv";
-import { createConnection } from "mysql2";
+import { createConnection, createPool } from "mysql2";
 
 // Cargar las variables de entorno desde el archivo .env
 dotenv.config();
 
-const db = createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+const db = createPool({
+  host: "autorack.proxy.rlwy.net",
+  user: "root",
+  password: "fkPYZOChHznaSqGQwokzTKorSBJfPMIi",
+  database: "railway",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  connectTimeout: 10000, // 10 segundos
 });
 
 db.connect((err) => {
